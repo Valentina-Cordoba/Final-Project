@@ -17,6 +17,9 @@ const RoleSchemaAdapter = {
       .catch((error) => {
         console.error('Error al eliminar registros existentes:', error);
       });
+  },
+  getRoles: function() {
+    return RoleSchema.find()
   }
 };
 
