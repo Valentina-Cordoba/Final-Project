@@ -9,9 +9,8 @@ function setup(app) {
   RoleSchemaAdapter.initialize();
   const roleController = new RoleController();
   app.get('/roles', roleController.getAllRoles.bind(roleController));
-  }
-  
-  module.exports = {
-    setup,
-  };
-  
+}
+
+module.exports = {
+  setup,
+};

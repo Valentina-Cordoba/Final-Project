@@ -1,8 +1,7 @@
 const RoleSchemaAdapter = require('../../infraestructure/role.schema.adapter');
 
 class ReadRole {
-  constructor() {
-  }
+  constructor() {}
   async getRolesUseCase() {
     const rolesData = await RoleSchemaAdapter.getRoles();
     return rolesData;

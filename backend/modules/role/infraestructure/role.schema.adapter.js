@@ -7,20 +7,19 @@ const RoleSchemaAdapter = {
         const roles = [
           { name: 'empleado', description: 'Empleado' },
           { name: 'cliente', description: 'Cliente' },
-          { name: 'administrador', description: 'Administrador' }
+          { name: 'administrador', description: 'Administrador' },
         ];
-        RoleSchema.create(roles)
-          .catch((error) => {
-            console.error('Error al crear registros por defecto:', error);
-          });
+        RoleSchema.create(roles).catch((error) => {
+          console.error('Error al crear registros por defecto:', error);
+        });
       })
       .catch((error) => {
         console.error('Error al eliminar registros existentes:', error);
       });
   },
-  getRoles: function() {
-    return RoleSchema.find()
-  }
+  getRoles: function () {
+    return RoleSchema.find();
+  },
 };
 
 module.exports = RoleSchemaAdapter;

@@ -3,46 +3,42 @@ const mongoose = require('mongoose');
 const userSchema = new mongoose.Schema({
   first_name: {
     type: String,
-    required: true
+    required: true,
   },
   last_name: {
     type: String,
-    required: true
+    required: true,
   },
   dni: {
     type: String,
-    required: true
+    required: true,
   },
   birth_date: {
     type: Date,
-    required: true
+    required: true,
   },
   phone: {
     type: String,
-    required: true
+    required: true,
   },
   role_id: {
     type: mongoose.Schema.Types.ObjectId,
-    required: true
+    required: true,
   },
   email: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
   },
   password: {
     type: String,
-    required: true
+    required: true,
   },
   user_name: {
     type: String,
     required: true,
-    unique: true
-  },
-  client: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Client'
-  }]
+    unique: true,
+  }
 });
 
 const User = mongoose.model('User', userSchema);

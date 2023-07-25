@@ -2,18 +2,16 @@
 const ReadRole = require('./readRole/read.role.usecase');
 
 class RoleController {
-    constructor() {
+  constructor() {}
+  async getAllRoles(req, res) {
+    try {
+      const readRole = new ReadRole();
+      const roles = await readRole.getRolesUseCase();
+      res.json(roles);
+    } catch (error) {
+      res.status(500).json({ error: 'Error al obtener los roles' });
     }
-    async getAllRoles(req, res) {
-        try {
-          const readRole = new ReadRole();
-          const roles = await readRole.getRolesUseCase();
-          res.json(roles);
-        } catch (error) {
-          res.status(500).json({ error: 'Error al obtener los roles' });
-        }
-      }
-
+  }
 }
 
 module.exports = RoleController;
