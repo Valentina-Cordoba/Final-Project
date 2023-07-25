@@ -75,6 +75,59 @@ header {
   .resultMovies{
     height: 40rem;
   }
+
+
+  .flip-card {
+    background-color: transparent;
+    width: 240px;
+    height: 330px;
+    perspective: 1000px;
+    font-family: sans-serif;
+    margin-left: 27%;
+    margin-top: 4%;
+    font-size: 20px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid coral;
+    border-radius: 1rem;
+  }
+  
+  .flip-card-front {
+    background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
+        rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.812) 48%);
+    color: coral;
+  }
+  
+  .flip-card-back {
+    background: linear-gradient(120deg, rgb(245, 244, 236) 30%, rgb(254, 236, 148) 88%,
+        rgb(249, 249, 249) 40%, rgb(250, 235, 123) 78%);
+    color: rgb(25, 24, 24);
+    transform: rotateY(180deg);
+  }
   
   footer{
     background-color: #bfbfbf;
