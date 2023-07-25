@@ -131,15 +131,21 @@ select {
     display: inline;
   }
 
- a{
-    margin-left: 2rem;
+ .links a{
     text-decoration: none;
     color: black;
+   
  }
 
  .info{
-    margin-left: 28rem;
+    margin-left: 29rem;
  }
+
+ .cineco, .Contactanos, .Preguntas{
+    margin-left: 2rem;
+ }
+
+
 
 
 
