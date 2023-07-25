@@ -78,54 +78,7 @@
 
   </footer>
 
-
-  <script>
-    const rolesSelect = document.getElementById('roles');
-    const infoRolDiv = document.getElementById('infoRol');
-
-    // Función para obtener los datos de los roles desde el servidor
-    async function getRoles() {
-      try {
-        const response = await fetch('/roles');
-        const roles = await response.json();
-
-        roles.forEach((rol) => {
-          const option = document.createElement('option');
-          option.value = rol._id;
-          option.textContent = rol.nombre;
-          rolesSelect.appendChild(option);
-        });
-
-        // los cambios en la lista desplegable
-        rolesSelect.addEventListener('change', () => {
-          const selectedRoleId = rolesSelect.value;
-          mostrarInformacionRol(selectedRoleId);
-        });
-      } catch (err) {
-        console.error('Error al obtener los roles:', err);
-      }
-    }
-
-    // Función para mostrar la información del rol seleccionado
-    async function mostrarInformacionRol(rolId) {
-      try {
-        const response = await fetch(`/roles/${rolId}`);
-        const rol = await response.json();
-
-        // Mostrar la información del rol en el div correspondiente
-        infoRolDiv.innerHTML = `
-          <h3>${rol.nombre}</h3>
-          <p>${rol.descripcion}</p>
-          <!-- Otros campos que quieras mostrar -->
-        `;
-      } catch (err) {
-        console.error('Error al obtener la información del rol:', err);
-      }
-    }
-
-    // Llamar a la función para obtener los roles al cargar la página
-    getRoles();
-  </script>
+  <script src="script.js"></script>
 
 </body>
 

@@ -72,18 +72,14 @@ header {
   background-color: rgba(54, 54, 56, 1);
 }
 
-.resultMovies {
-  height: 40rem;
-}
-
 .flip-card {
   background-color: transparent;
   width: 16rem;
   height: 22rem;
   perspective: 1000px;
   font-family: sans-serif;
-  margin-left: 3rem;
-  margin-top: 7rem;
+  margin-left: 18rem;
+  margin-top: 10rem;
   font-size: 20px;
 }
 
@@ -126,6 +122,25 @@ header {
       rgb(5, 48, 66) 40%, rgba(2, 18, 36, 0.812) 48%);
   color: rgb(2, 18, 29);
   transform: rotateY(180deg);
+}
+
+.containerSinopsis{
+  width: 40vw;
+  height: 70vh;
+  margin-top: 5rem;
+  margin-left: 2%;
+  background-color: #9499a4;
+  border:2px solid #020a1c;
+}
+
+.SinopsisText{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+h2{
+   margin-top: 2rem;
+   margin-left: 1rem;
 }
 
 footer {
