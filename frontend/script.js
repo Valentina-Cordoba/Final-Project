@@ -27,16 +27,16 @@ async function searchMovies (){
         moviesContainer.innerHTML=
         `
             <h2> ${information.name.toUpperCase()} </h2>
-            <img src="${information.sprites.front_default}" alt="${information.name}">
+            <p> Nombre: ${information.name} </p>
             <p> Numero: ${information.id}</p> 
         `;
 
         moviesOneContainer.innerHTML=
         `
             <h2> ${information.name.toUpperCase()} </h2>
-            <img src="${information.sprites.front_default}" alt="${information.name}">
-            <p> Altura: ${information.height}</p>
-            <p> Peso: ${information.weight}</p>
+            <img src="${information.url}" alt="${information.name}">
+            <p> Altura: ${information.duration}</p>
+            <p> Peso: ${information.genre}</p>
         `;
         
     } catch (error) {
