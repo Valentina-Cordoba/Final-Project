@@ -1,5 +1,5 @@
 
-const url = 'localhost:3000/movies/';
+const url = 'http://localhost:3000/movies/';
 
 const searchInput = document.getElementById("search");
 const moviesContainer = document.getElementById("movies");
@@ -11,32 +11,29 @@ function showError(msg) {
 
 async function searchMovies (){
 
-    const searchedMovies = searchInput.value.toLowerCase();
+    const searchedMovies = searchInput.value;
 
     try {
 
         const response = await fetch(url+searchedMovies)
         console.log(response)
         if (!response.ok) {
-            showError(`No se encontró ningún Pokémon llamado "${searchedMovies}"`);
+            showError(`No se encontró ninguna pelicula "${searchedMovies}"`);
             return;
         }
         
-        const information = await response.json();
+        const information = await response.json;
 
         moviesContainer.innerHTML=
         `
-            <h2> ${information.name.toUpperCase()} </h2>
-            <p> Nombre: ${information.name} </p>
-            <p> Numero: ${information.id}</p> 
+            <h2> ${information.name} </h2> 
         `;
 
         moviesOneContainer.innerHTML=
         `
-            <h2> ${information.name.toUpperCase()} </h2>
-            <img src="${information.url}" alt="${information.name}">
-            <p> Altura: ${information.duration}</p>
-            <p> Peso: ${information.genre}</p>
+            <h2> ${information.name} </h2>
+            <p> Duracion: ${information.duration}</p>
+            <p> Genero: ${information.genre}</p>
         `;
         
     } catch (error) {
