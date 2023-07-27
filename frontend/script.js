@@ -2,11 +2,11 @@
 const url = 'localhost:3000/movies/';
 
 const searchInput = document.getElementById("search");
-const pokedexContainer = document.getElementById("movies");
-const pokedexOneContainer = document.getElementById("movies1");
+const moviesContainer = document.getElementById("movies");
+const moviesOneContainer = document.getElementById("movies1");
 
 function showError(msg) {
-    pokedexContainer.innerHTML = `<p class="error">${msg}</p>`;
+    moviesContainer.innerHTML = `<p class="error">${msg}</p>`;
 }
 
 async function searchMovies (){
@@ -24,14 +24,14 @@ async function searchMovies (){
         
         const information = await response.json();
 
-        pokedexContainer.innerHTML=
+        moviesContainer.innerHTML=
         `
             <h2> ${information.name.toUpperCase()} </h2>
             <img src="${information.sprites.front_default}" alt="${information.name}">
             <p> Numero: ${information.id}</p> 
         `;
 
-        pokedexOneContainer.innerHTML=
+        moviesOneContainer.innerHTML=
         `
             <h2> ${information.name.toUpperCase()} </h2>
             <img src="${information.sprites.front_default}" alt="${information.name}">
