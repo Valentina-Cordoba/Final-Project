@@ -9,7 +9,10 @@ function setup(app) {
   MovieSchemaAdapter.initialize();
   const movieController = new MovieController();
   app.get('/movies', movieController.getAllMovies.bind(movieController));
-  app.get('/movies/:name', movieController.getMovieByName.bind(movieController));
+  app.get(
+    '/movies/:name',
+    movieController.getMovieByName.bind(movieController)
+  );
 }
 
 module.exports = {

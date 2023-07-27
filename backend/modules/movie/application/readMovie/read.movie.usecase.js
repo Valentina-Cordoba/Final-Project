@@ -6,16 +6,16 @@ class ReadMovie {
     try {
       const moviesData = await MovieSchemaAdapter.getMovies();
       return moviesData;
-    } catch (error){
-      throw new Error(error)
+    } catch (error) {
+      throw new Error(error);
     }
   }
   async getMoviesByNameUseCase(name) {
     try {
       const moviesData = await MovieSchemaAdapter.getMovieByName(name);
       return moviesData;
-    } catch (error){
-      throw new Error(error)
+    } catch (error) {
+      throw new Error(error);
     }
   }
 }
