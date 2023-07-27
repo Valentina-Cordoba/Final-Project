@@ -1,8 +1,12 @@
 const UserServicePort = require('../domain/user.service.port');
 
 class UserService extends UserServicePort {
-  toLowerCase(text) {
-    return text.toLowerCase();
+  adjustText(text) {
+    try {
+      return text.toLowerCase().trim();
+    } catch (error) {
+      throw new Error(error);
+    }
   }
 }
 

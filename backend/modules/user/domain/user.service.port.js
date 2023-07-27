@@ -1,5 +1,5 @@
 class UserServicePort {
-  toLowerCase(text) {
+  adjustText(text) {
     throw new Error('Método toLowerCase() no implementado');
   }
 }

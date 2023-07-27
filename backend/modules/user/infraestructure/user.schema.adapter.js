@@ -1,7 +1,7 @@
 const UserSchema = require('./user.schema');
 
 const UserSchemaAdapter = {
-  createUser: function (
+  createUser: async function (
     first_name,
     last_name,
     dni,
@@ -13,18 +13,24 @@ const UserSchemaAdapter = {
     user_name,
     client_id
   ) {
-    return UserSchema.create({
-      first_name: first_name,
-      last_name: last_name,
-      dni: dni,
-      birth_date: birth_date,
-      phone: phone,
-      role_id: role_id,
-      email: email,
-      password: password,
-      user_name: user_name,
-      client_id: client_id,
-    });
+    try {
+      return await UserSchema.create({
+        first_name: first_name,
+        last_name: last_name,
+        dni: dni,
+        birth_date: birth_date,
+        phone: phone,
+        role_id: role_id,
+        email: email,
+        password: password,
+        user_name: user_name,
+        client_id: client_id,
+      });
+    } catch (error) {
+      throw new Error(
+        'Se ha presentado un error al crear el usuario: ' + error
+      );
+    }
   },
 };
 
