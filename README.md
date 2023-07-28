@@ -142,5 +142,5 @@ La estructura de carpetas es la siguiente:
 El `role_id` debe ser el ID correspondiente a uno de los roles disponibles, obtenidos mediante la API de `/roles`.
 
 ## Notas adicionales
-* Usamos la librería Mongoose para conectarnos a la base de datos de MongoDB y manejar los modelos de datos.
+* Use la librería Mongoose para la conexion a la base de datos de MongoDB y manejar los modelos de datos.
 * Utilizamos Prettier para garantizar la consistencia en el formato y espaciado del código.
