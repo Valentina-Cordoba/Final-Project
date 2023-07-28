@@ -1,6 +1,6 @@
 # Instrucciones para iniciar la aplicación
 
-¡Bienvenido a nuestra aplicación en Express.js con aproximación a la arquitectura hexagonal!
+¡Bienvenido a esta aplicación en Express.js con aproximación a la arquitectura hexagonal!
 
 ## Instalación
 
@@ -14,7 +14,7 @@ npm install
 
 ## Base de datos
 
-Asegúrate de tener MongoDB instalado en tu sistema local, ya que nuestra aplicación se conectará a una base de datos de MongoDB.
+Asegúrate de tener MongoDB instalado en tu sistema local, ya que la aplicación se conectará a una base de datos de MongoDB.
 
 ## Iniciar la aplicación
 
@@ -29,7 +29,7 @@ Esto levantará la aplicación en `localhost` en el puerto `3000`.
 
 ## Descripción de la aplicación
 
-Nuestra aplicación es una API en Express.js que sigue una aproximación a la arquitectura hexagonal. Está organizada en módulos, donde cada módulo representa una funcionalidad específica de la aplicación y tiene su representación en el ORM de las colecciones de MongoDB.
+La aplicación es una API en Express.js que sigue una aproximación a la arquitectura hexagonal. Está organizada en módulos, donde cada módulo representa una funcionalidad específica de la aplicación y tiene su representación en el ORM de las colecciones de MongoDB.
 
 ## Estructura de carpetas
 
@@ -142,5 +142,5 @@ La estructura de carpetas es la siguiente:
 El `role_id` debe ser el ID correspondiente a uno de los roles disponibles, obtenidos mediante la API de `/roles`.
 
 ## Notas adicionales
-* Usamos la librería Mongoose para conectarnos a la base de datos de MongoDB y manejar los modelos de datos.
+* Use la librería Mongoose para la conexion a la base de datos de MongoDB y manejar los modelos de datos.
 * Utilizamos Prettier para garantizar la consistencia en el formato y espaciado del código.
